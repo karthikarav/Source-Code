@@ -1,0 +1,37 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% load shop_tag %}
+
+{% block title %}Cart Page{% endblock %} 
+
+{% block content %}
+    <!-- Navbar Start -->
+    {% navbar_category %}
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">Location</h1>
+            <div class="d-inline-flex">
+                <p class="m-0"><a href="{% url 'index' %}">Home</a></p>
+                <p class="m-0 px-2">-</p>
+                <p class="m-0">Location</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Cart Start -->
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5">
+            <div class="col-lg-12 table-responsive mb-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d120863.21279872434!2d80.08221532429452!3d12.994274705096212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sformers%20in%20tamilnadu!5e0!3m2!1sen!2sin!4v1706686276508!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125432.38736744139!2d79.11696901285536!3d10.752809038882297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sformers%20in%20thanjavur!5e0!3m2!1sen!2sin!4v1706686342334!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Cart End -->
+{% endblock %}

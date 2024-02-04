@@ -1,0 +1,49 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% load shop_tag %}
+
+{% block title %}Product Detail Page{% endblock %} 
+
+{% block content %}
+    <!-- Navbar Start -->
+    {% navbar_category %}
+    <!-- Navbar End -->
+
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">About Us</h1>
+            <div class="d-inline-flex">
+                <p class="m-0"><a href="{% url 'index' %}">Home</a></p>
+                <p class="m-0 px-2">-</p>
+                <p class="m-0">About-Us</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="text-center mb-4">
+            <h2 class="section-title px-5"><span class="px-2">About Best Shop</span></h2>
+        </div>
+        <div class="row px-xl-5">
+            <div class="col-lg-7 mb-5 px-5">
+                <p>online agriculture management application is a digital platform that permits farmers and agricultural professionals to manage and operate their businesses online. With a web-based system, users may access a variety of tools and information from any internet-connected device, making it convenient and user-friendly.</p>
+            </div>
+            <div class="col-lg-5 mb-5">
+                <h5 class="font-weight-semi-bold mb-3">Get In Touch</h5>
+                <p>{% about_shop %}</p>
+                <div class="d-flex flex-column mb-3">
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>{% address %}</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>{% email %}</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>{% phone %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+{% endblock %}
